@@ -28,7 +28,7 @@ Note that this is a subset of the SIGNS dataset. The complete dataset contains m
 
 
 ## Models
-Deep "plain" networks don't work in practice because they are hard to train due to gradients exploration. ResNet block with skip connections can help to address this problem thus to make the networks go deeper. Two types of blocks are implemented in this model: the identity block and the convolutional block. Deep Residual Networks are built by stacking these blocks together.
+Deep "plain" convolutional neural networks don't work in practice because they are hard to train due to gradients exploration. ResNet block with skip connections can help to address this problem thus to make the networks go deeper. Two types of blocks are implemented in this model: the identity block and the convolutional block. Deep Residual Networks are built by stacking these blocks together.
 
 The model contains 50 hidden layers. Using a softmax output layer, the models is able to generalizes more than two classes of outputs.
 
@@ -40,6 +40,7 @@ The input image has a size of (64,64,3).
 For purpose of demonstration, the model is trained for 2 epoches firstly. The model requires several hours of training with the ResNet. So the model will use the pre-trained model instead which is saved as *ResNet50.h5* file. In this way, lots of time is saved. The result of the prediction is saved in the *Result.CSV* file.
 
 You can try to put your image inside for prediction. To test your own sign image, only need to change the file name in line 239.
+In the last, the whole structure of the ResNet is saved in Scalable Vector Graphics (SVG) format as *model.png*.
 
 
 Keep safe and see you soon!
