@@ -10,7 +10,7 @@ By Tianyang Zhao
 4. Reference
 
 ## Introduction
-This repository contains the Multilayer Perceptron model. The goal of the model is to decipher sign language (from 0 -> 5) .
+This repository contains the Deep Residual Network model. The goal of the model is to decipher sign language (from 0 -> 5) .
 Here are examples for each number, and how an explanation of representing the labels. These are the original pictures, before lowering the image resolutoion to 64 by 64 pixels. 
 
 ![image](https://github.com/berlintofind/Multilayer-Perceptron/blob/main/images/hands.png)
@@ -28,19 +28,17 @@ Note that this is a subset of the SIGNS dataset. The complete dataset contains m
 
 
 ## Models
-The model contains 4 hidden layers, and [25, 20, 14, Number_Classes] units for each layer. Using a softmax output layer, the models is able to generalizes more than two classes of outputs.
+Deep "plain" networks don't work in practice because they are hard to train due to gradients exploration. ResNet block with skip connections can help to address this problem thus to make the networks go deeper. Two types of blocks are implemented in this model: the identity block and the convolutional block. Deep Residual Networks are built by stacking these blocks together.
 
-The architecture of the model is: **LINEAR -> batch_normalization -> RELU -> LINEAR -> batch_normalization -> RELU -> LINEAR -> batch_normalization -> RELU -> LINEAR -> batch_normalization -> SOFTMAX** 
+The model contains 50 hidden layers. Using a softmax output layer, the models is able to generalizes more than two classes of outputs.
 
-By changing the parameter *layers_dims*. Users can flexible adjust the model to any depth and width as he wishes. 
-The *layers_dims* used in this model is *[X_train.shape[0], 25, 20,14, Number_Classes]*. *Number_Classes = 6* as the dataset contains 6 different signs (from 0 -> 5).
+The architecture of the model is shown as follows:
+![image](https://github.com/berlintofind/Image-classification-models-with-Deep-Residual-Networks/blob/main/images/resnet_kiank.png)
+
+The inptu images has a size of (64,64,3). 
 
 
-With tf.train.Saver(), all the parameters and computation graph is saved in the *MLP_Softmax* folder. It saves three types of checkpoint documents automatically for each 10 iterations. When the user need to reload the trained model, he could specify the parameters of the iteration he need. Otherwise, the model will reload the parameters from the latest chckpoint.
-
-With tf.summary(), the loss of model is recorded during the training process and save in the *Summaryfile*. With Tensorboard, the loss could be visulized easily. The user can also customize any other metrics.
-
-You can try to put your image inside, and test your own sign image by changing the file name in line 209.
+You can try to put your image inside, and test your own sign image by changing the file name in line 239.
 
 #### Note
 1. GPU memory might be insufficient for extremely deep models ( it takes 1GB, around 27min, trained on Tesla K80)
@@ -55,6 +53,7 @@ Keep safe and see you soon!
 
 #### Performance on the Test set
 **Test Accuracy**	0.866
+
 **Test Loss** 0.530
 
 ## Reference
