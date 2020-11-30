@@ -52,7 +52,7 @@ Keep safe and see you soon!
 
 **Test Loss** 0.530
 
-**Rsult of prediction of my_image.jpg** :[3.4187701e-06,2.7741256e-04,9.9952292e-01,1.9884241e-07,1.9561907e-04,4.1168590e-07]
+**Result of prediction of my_image.jpg** :[3.4187701e-06,2.7741256e-04,9.9952292e-01,1.9884241e-07,1.9561907e-04,4.1168590e-07]
 
 ## Reference
 1. [Deep Residual Networks](https://github.com/KaimingHe/deep-residual-networks#table-of-contents)
