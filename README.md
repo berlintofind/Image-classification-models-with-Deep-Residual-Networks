@@ -35,26 +35,24 @@ The model contains 50 hidden layers. Using a softmax output layer, the models is
 The architecture of the model is shown as follows:
 ![image](https://github.com/berlintofind/Image-classification-models-with-Deep-Residual-Networks/blob/main/images/resnet_kiank.png)
 
-The inptu images has a size of (64,64,3). 
+The input image has a size of (64,64,3). 
 
+For purpose of demonstration, the model is trained for 2 epoches firstly. The model requires several hours of training with the ResNet. So the model will use the pre-trained model instead which is saved as *ResNet50.h5* file. In this way, lots of time is saved. The result of the prediction is saved in the *Result.CSV* file.
 
-You can try to put your image inside, and test your own sign image by changing the file name in line 239.
+You can try to put your image inside for prediction. To test your own sign image, only need to change the file name in line 239.
 
-#### Note
-1. GPU memory might be insufficient for extremely deep models ( it takes 1GB, around 27min, trained on Tesla K80)
-2. Changes of mini-batch size should impact accuracy ( minibatch_size = 32 in this model)
-3. the data is randomly shuffled at the beginning of every epoch.
 
 Keep safe and see you soon!
 
 ## Results
-#### Performance on the Training set
-**Train Accuracy** 0.999074
 
 #### Performance on the Test set
+
 **Test Accuracy**	0.866
 
 **Test Loss** 0.530
+
+**Rsult of prediction of my_image.jpg** :[3.4187701e-06,2.7741256e-04,9.9952292e-01,1.9884241e-07,1.9561907e-04,4.1168590e-07]
 
 ## Reference
 1. [Deep Residual Networks](https://github.com/KaimingHe/deep-residual-networks#table-of-contents)
