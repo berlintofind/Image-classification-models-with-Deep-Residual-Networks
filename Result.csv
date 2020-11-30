@@ -1,0 +1,6 @@
+two epoch loss,3.40141228
+two epoch test accuracy,0.166666672
+ResNet loss,0.530178146
+ResNet Test Accuracy,0.866666675
+"class prediction vector [p(0), p(1), p(2), p(3), p(4), p(5)] = ","[[3.4187701e-06 2.7741256e-04 9.9952292e-01 1.9884241e-07 1.9561907e-04
+  4.1168590e-07]]"
