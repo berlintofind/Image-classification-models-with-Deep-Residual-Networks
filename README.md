@@ -43,7 +43,7 @@ You can try to put your image inside for prediction. To test your own sign image
 In the last, the whole structure of the ResNet is saved in Scalable Vector Graphics (SVG) format as *model.png*.
 
 
-Keep safe and see you soon!
+**Keep safe and see you soon!**
 
 ## Results
 
